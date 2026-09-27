@@ -1,0 +1,538 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #ffffff;
+
+    color: #222;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 70px;
+
+    padding: 0 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: white;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.logo {
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #5b2bd9;
+}
+
+
+.navbar a {
+    text-decoration: none;
+
+    color: #333;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 400px;
+
+    padding: 70px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            100deg,
+            #24104e,
+            #7136cf
+        );
+}
+
+
+.hero-content {
+    max-width: 700px;
+}
+
+
+.tag {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    border: 1px solid #ffffff66;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+.hero h1 {
+    font-size: 52px;
+
+    line-height: 1.1;
+
+    margin: 20px 0;
+}
+
+
+.hero h1 span {
+    color: #ffca3a;
+}
+
+
+.hero p {
+    font-size: 18px;
+
+    color: #eeeeee;
+}
+
+
+.start-btn {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 13px 22px;
+
+    background: #ffca3a;
+
+    color: #281650;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 94%;
+
+    max-width: 1050px;
+
+    margin: 40px auto;
+}
+
+
+/* =========================
+   CREATOR
+========================= */
+
+.creator {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 30px rgba(37, 22, 83, 0.1);
+
+    margin-bottom: 30px;
+}
+
+
+.heading {
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+.icon {
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eee6ff;
+
+    border-radius: 10px;
+
+    font-size: 22px;
+}
+
+
+.heading h2 {
+    margin: 0;
+}
+
+
+.heading p {
+    margin: 3px 0;
+
+    color: #777;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+label {
+    display: block;
+
+    margin: 12px 0 6px;
+
+    font-weight: bold;
+}
+
+
+textarea,
+input,
+select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+}
+
+
+textarea {
+    height: 110px;
+
+    resize: vertical;
+}
+
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px 18px;
+}
+
+
+/* =========================
+   IMAGE UPLOAD
+========================= */
+
+.upload-help {
+    margin: 5px 0 8px;
+
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+#panelImages {
+    padding: 12px;
+
+    border: 2px dashed #5b2bd9;
+
+    background: #f8f5ff;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   GENERATE BUTTON
+========================= */
+
+.generate-btn {
+    width: 100%;
+
+    margin-top: 22px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #5b2bd9;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.generate-btn:hover {
+    background: #431db0;
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result {
+    background: #eeeeee;
+
+    padding: 20px;
+
+    border-radius: 5px;
+}
+
+
+.preview-title {
+    text-align: center;
+
+    color: #555;
+
+    font-size: 20px;
+}
+
+
+.result-info {
+    text-align: center;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   COMIC GRID
+========================= */
+
+.comic-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* =========================
+   COMIC PANEL
+========================= */
+
+.comic-panel {
+    background: white;
+
+    padding: 12px;
+
+    border-radius: 7px;
+
+    box-shadow:
+        0 1px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+.comic-panel h3 {
+    font-size: 14px;
+
+    margin: 0 0 10px;
+}
+
+
+.comic-panel img {
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 5px;
+
+    margin-bottom: 10px;
+}
+
+
+.no-image {
+    width: 100%;
+
+    height: 280px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eeeeee;
+
+    color: #777;
+
+    border-radius: 5px;
+
+    margin-bottom: 10px;
+
+    font-size: 15px;
+}
+
+
+.comic-panel p {
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    color: #555;
+
+    margin: 6px 0;
+}
+
+
+.comic-panel .scene {
+    font-style: italic;
+
+    color: #777;
+}
+
+
+.comic-panel b {
+    color: #333;
+}
+
+
+/* =========================
+   DOWNLOAD
+========================= */
+
+.download-btn {
+    display: block;
+
+    margin: 25px auto 5px;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #5b2bd9;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #777;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .comic-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .creator {
+        padding: 20px;
+    }
+
+}
+
+
+/* =========================
+   PRINT
+========================= */
+
+@media print {
+
+    .navbar,
+    .hero,
+    .creator,
+    footer,
+    .download-btn {
+        display: none;
+    }
+
+
+    main {
+        width: 100%;
+
+        margin: 0;
+    }
+
+
+    .result {
+        box-shadow: none;
+    }
+
+
+    .comic-panel {
+        break-inside: avoid;
+    }
+
+}

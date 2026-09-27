@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ComicCraft - AI Comic Story Creator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            🎨 ComicCraft
+        </div>
+
+        <a href="#creator">
+            Create Comic
+        </a>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="tag">
+                AI COMIC STORY CREATOR
+            </span>
+
+            <h1>
+                Turn Your <span>Imagination</span>
+                <br>
+                Into a Comic
+            </h1>
+
+            <p>
+                Create your own story and turn it into
+                a beautiful 5-panel comic.
+            </p>
+
+            <a href="#creator" class="start-btn">
+                Start Creating →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- CREATOR -->
+        <section class="creator" id="creator">
+
+            <div class="heading">
+
+                <div class="icon">
+                    ✦
+                </div>
+
+                <div>
+                    <h2>Create Your Comic</h2>
+
+                    <p>
+                        Enter your story details and upload your comic images.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <form id="comicForm">
+
+                <!-- STORY -->
+                <label>
+                    Story Prompt
+                </label>
+
+                <textarea
+                    id="story"
+                    required
+                    placeholder="Example: A brave fox exploring a mysterious forest..."
+                >A brave little fox exploring a mysterious forest and discovering a magical secret.</textarea>
+
+
+                <!-- FORM GRID -->
+                <div class="form-grid">
+
+                    <div>
+
+                        <label>
+                            Main Character Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="character"
+                            value="Arun"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div>
+
+                        <label>
+                            Setting
+                        </label>
+
+                        <select id="setting">
+
+                            <option>Forest</option>
+                            <option>School</option>
+                            <option>Space</option>
+                            <option>City</option>
+                            <option>Village</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div>
+
+                        <label>
+                            Story Tone
+                        </label>
+
+                        <select id="tone">
+
+                            <option>Adventure</option>
+                            <option>Funny</option>
+                            <option>Dramatic</option>
+                            <option>Light-hearted</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div>
+
+                        <label>
+                            Art Style
+                        </label>
+
+                        <select id="artStyle">
+
+                            <option>Comic Book</option>
+                            <option>Anime</option>
+                            <option>Cartoon</option>
+                            <option>Realistic</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- IMAGE UPLOAD -->
+                <label>
+                    Upload Comic Images
+                </label>
+
+                <p class="upload-help">
+                    Select up to 5 images. First image = Panel 1,
+                    second image = Panel 2, etc.
+                </p>
+
+                <input
+                    type="file"
+                    id="panelImages"
+                    accept="image/*"
+                    multiple
+                >
+
+
+                <!-- BUTTON -->
+                <button
+                    type="submit"
+                    class="generate-btn"
+                >
+                    ✨ Generate Comic
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- RESULT -->
+        <section
+            class="result"
+            id="result"
+        >
+
+            <h2 class="preview-title">
+                📖 Your Comic Preview
+            </h2>
+
+            <p
+                id="resultInfo"
+                class="result-info"
+            >
+                Generate your story to see the comic.
+            </p>
+
+
+            <!-- COMIC PANELS -->
+            <div
+                id="comicGrid"
+                class="comic-grid"
+            >
+            </div>
+
+
+            <!-- DOWNLOAD -->
+            <button
+                class="download-btn"
+                onclick="downloadComic()"
+            >
+                ⬇ Download Your Comic as PDF
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        ComicCraft • AI Comic Story Creator
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
