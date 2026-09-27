@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        ComicCraft — AI Comic Creator
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+<body>
+
+<main class="container">
+
+    <section class="hero">
+
+        <span class="badge">
+            AI COMIC CREATOR
+        </span>
+
+        <h1>
+            Turn your imagination into a comic.
+        </h1>
+
+        <p>
+            Write a story idea, choose the mood
+            and art style, and ComicCraft creates
+            five illustrated comic panels with
+            narration and dialogue.
+        </p>
+
+    </section>
+
+
+    <form
+        class="card form-card"
+        action="/generate"
+        method="post"
+        onsubmit="showLoading()"
+    >
+
+        <label>
+
+            Story Prompt
+
+            <textarea
+                name="story_prompt"
+                required
+                maxlength="1000"
+                placeholder="A brave fox discovers a hidden library in an enchanted forest..."
+            ></textarea>
+
+        </label>
+
+
+        <div class="grid">
+
+            <label>
+
+                Main Character Name
+
+                <input
+                    name="character_name"
+                    required
+                    maxlength="80"
+                    placeholder="Luna"
+                >
+
+            </label>
+
+
+            <label>
+
+                Setting
+
+                <select name="setting">
+
+                    <option>
+                        Enchanted forest
+                    </option>
+
+                    <option>
+                        School
+                    </option>
+
+                    <option>
+                        Space
+                    </option>
+
+                    <option>
+                        City
+                    </option>
+
+                    <option>
+                        Underwater kingdom
+                    </option>
+
+                </select>
+
+            </label>
+
+
+            <label>
+
+                Story Tone
+
+                <select name="tone">
+
+                    <option>
+                        Light-hearted
+                    </option>
+
+                    <option>
+                        Dramatic
+                    </option>
+
+                    <option>
+                        Poetic
+                    </option>
+
+                    <option>
+                        Funny
+                    </option>
+
+                    <option>
+                        Adventure
+                    </option>
+
+                </select>
+
+            </label>
+
+
+            <label>
+
+                Art Style
+
+                <select name="art_style">
+
+                    <option>
+                        Comic book
+                    </option>
+
+                    <option>
+                        Anime
+                    </option>
+
+                    <option>
+                        Pixel art
+                    </option>
+
+                    <option>
+                        Realistic illustration
+                    </option>
+
+                    <option>
+                        Watercolor
+                    </option>
+
+                </select>
+
+            </label>
+
+        </div>
+
+
+        <button
+            class="primary"
+            id="submitBtn"
+            type="submit"
+        >
+
+            ✨ Create My Comic
+
+        </button>
+
+
+        <p
+            id="loading"
+            class="loading"
+            hidden
+        >
+
+            Creating your story and illustrations.
+            This can take a little while…
+
+        </p>
+
+    </form>
+
+</main>
+
+
+<script>
+
+function showLoading() {
+
+    document
+        .getElementById("submitBtn")
+        .disabled = true;
+
+    document
+        .getElementById("submitBtn")
+        .textContent = "Creating…";
+
+    document
+        .getElementById("loading")
+        .hidden = false;
+
+}
+
+</script>
+
+
+</body>
+
+</html>
